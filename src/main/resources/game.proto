@@ -1,0 +1,14 @@
+syntax = "proto3";
+option java_package ="ma.enset.subs";
+service  GameService{
+  rpc fullDirectionStream(stream guessRequest) returns(stream guessResponse); // Bi-directionnel Streaming
+}
+message guessRequest{
+  string clientName = 1;
+  double number =2;
+}
+message guessResponse {
+  string clientName = 1;
+  double number =2;
+  bool isTrue =3;
+}
