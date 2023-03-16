@@ -5,10 +5,11 @@ service  GameService{
 }
 message guessRequest{
   string clientName = 1;
-  double number =2;
+  int32 number =2;
 }
 message guessResponse {
   string clientName = 1;
   double number =2;
-  bool isTrue =3;
+  string eventialitee  =3;
+  bool isTrue =4;
 }

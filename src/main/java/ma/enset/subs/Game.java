@@ -31,10 +31,10 @@ public final class Game {
         getClientNameBytes();
 
     /**
-     * <code>double number = 2;</code>
+     * <code>int32 number = 2;</code>
      * @return The number.
      */
-    double getNumber();
+    int getNumber();
   }
   /**
    * Protobuf type {@code guessRequest}
@@ -88,9 +88,9 @@ public final class Game {
               clientName_ = s;
               break;
             }
-            case 17: {
+            case 16: {
 
-              number_ = input.readDouble();
+              number_ = input.readInt32();
               break;
             }
             default: {
@@ -162,12 +162,12 @@ public final class Game {
     }
 
     public static final int NUMBER_FIELD_NUMBER = 2;
-    private double number_;
+    private int number_;
     /**
-     * <code>double number = 2;</code>
+     * <code>int32 number = 2;</code>
      * @return The number.
      */
-    public double getNumber() {
+    public int getNumber() {
       return number_;
     }
 
@@ -188,8 +188,8 @@ public final class Game {
       if (!getClientNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clientName_);
       }
-      if (number_ != 0D) {
-        output.writeDouble(2, number_);
+      if (number_ != 0) {
+        output.writeInt32(2, number_);
       }
       unknownFields.writeTo(output);
     }
@@ -203,9 +203,9 @@ public final class Game {
       if (!getClientNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clientName_);
       }
-      if (number_ != 0D) {
+      if (number_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(2, number_);
+          .computeInt32Size(2, number_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -224,9 +224,8 @@ public final class Game {
 
       if (!getClientName()
           .equals(other.getClientName())) return false;
-      if (java.lang.Double.doubleToLongBits(getNumber())
-          != java.lang.Double.doubleToLongBits(
-              other.getNumber())) return false;
+      if (getNumber()
+          != other.getNumber()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -241,8 +240,7 @@ public final class Game {
       hash = (37 * hash) + CLIENTNAME_FIELD_NUMBER;
       hash = (53 * hash) + getClientName().hashCode();
       hash = (37 * hash) + NUMBER_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getNumber()));
+      hash = (53 * hash) + getNumber();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -378,7 +376,7 @@ public final class Game {
         super.clear();
         clientName_ = "";
 
-        number_ = 0D;
+        number_ = 0;
 
         return this;
       }
@@ -460,7 +458,7 @@ public final class Game {
           clientName_ = other.clientName_;
           onChanged();
         }
-        if (other.getNumber() != 0D) {
+        if (other.getNumber() != 0) {
           setNumber(other.getNumber());
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -568,32 +566,32 @@ public final class Game {
         return this;
       }
 
-      private double number_ ;
+      private int number_ ;
       /**
-       * <code>double number = 2;</code>
+       * <code>int32 number = 2;</code>
        * @return The number.
        */
-      public double getNumber() {
+      public int getNumber() {
         return number_;
       }
       /**
-       * <code>double number = 2;</code>
+       * <code>int32 number = 2;</code>
        * @param value The number to set.
        * @return This builder for chaining.
        */
-      public Builder setNumber(double value) {
+      public Builder setNumber(int value) {
         
         number_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>double number = 2;</code>
+       * <code>int32 number = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearNumber() {
         
-        number_ = 0D;
+        number_ = 0;
         onChanged();
         return this;
       }
@@ -673,7 +671,19 @@ public final class Game {
     double getNumber();
 
     /**
-     * <code>bool isTrue = 3;</code>
+     * <code>string eventialitee = 3;</code>
+     * @return The eventialitee.
+     */
+    java.lang.String getEventialitee();
+    /**
+     * <code>string eventialitee = 3;</code>
+     * @return The bytes for eventialitee.
+     */
+    com.google.protobuf.ByteString
+        getEventialiteeBytes();
+
+    /**
+     * <code>bool isTrue = 4;</code>
      * @return The isTrue.
      */
     boolean getIsTrue();
@@ -692,6 +702,7 @@ public final class Game {
     }
     private guessResponse() {
       clientName_ = "";
+      eventialitee_ = "";
     }
 
     @java.lang.Override
@@ -735,7 +746,13 @@ public final class Game {
               number_ = input.readDouble();
               break;
             }
-            case 24: {
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              eventialitee_ = s;
+              break;
+            }
+            case 32: {
 
               isTrue_ = input.readBool();
               break;
@@ -818,10 +835,46 @@ public final class Game {
       return number_;
     }
 
-    public static final int ISTRUE_FIELD_NUMBER = 3;
+    public static final int EVENTIALITEE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object eventialitee_;
+    /**
+     * <code>string eventialitee = 3;</code>
+     * @return The eventialitee.
+     */
+    public java.lang.String getEventialitee() {
+      java.lang.Object ref = eventialitee_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        eventialitee_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string eventialitee = 3;</code>
+     * @return The bytes for eventialitee.
+     */
+    public com.google.protobuf.ByteString
+        getEventialiteeBytes() {
+      java.lang.Object ref = eventialitee_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        eventialitee_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ISTRUE_FIELD_NUMBER = 4;
     private boolean isTrue_;
     /**
-     * <code>bool isTrue = 3;</code>
+     * <code>bool isTrue = 4;</code>
      * @return The isTrue.
      */
     public boolean getIsTrue() {
@@ -848,8 +901,11 @@ public final class Game {
       if (number_ != 0D) {
         output.writeDouble(2, number_);
       }
+      if (!getEventialiteeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, eventialitee_);
+      }
       if (isTrue_ != false) {
-        output.writeBool(3, isTrue_);
+        output.writeBool(4, isTrue_);
       }
       unknownFields.writeTo(output);
     }
@@ -867,9 +923,12 @@ public final class Game {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(2, number_);
       }
+      if (!getEventialiteeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, eventialitee_);
+      }
       if (isTrue_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, isTrue_);
+          .computeBoolSize(4, isTrue_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -891,6 +950,8 @@ public final class Game {
       if (java.lang.Double.doubleToLongBits(getNumber())
           != java.lang.Double.doubleToLongBits(
               other.getNumber())) return false;
+      if (!getEventialitee()
+          .equals(other.getEventialitee())) return false;
       if (getIsTrue()
           != other.getIsTrue()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -909,6 +970,8 @@ public final class Game {
       hash = (37 * hash) + NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           java.lang.Double.doubleToLongBits(getNumber()));
+      hash = (37 * hash) + EVENTIALITEE_FIELD_NUMBER;
+      hash = (53 * hash) + getEventialitee().hashCode();
       hash = (37 * hash) + ISTRUE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsTrue());
@@ -1049,6 +1112,8 @@ public final class Game {
 
         number_ = 0D;
 
+        eventialitee_ = "";
+
         isTrue_ = false;
 
         return this;
@@ -1079,6 +1144,7 @@ public final class Game {
         ma.enset.subs.Game.guessResponse result = new ma.enset.subs.Game.guessResponse(this);
         result.clientName_ = clientName_;
         result.number_ = number_;
+        result.eventialitee_ = eventialitee_;
         result.isTrue_ = isTrue_;
         onBuilt();
         return result;
@@ -1134,6 +1200,10 @@ public final class Game {
         }
         if (other.getNumber() != 0D) {
           setNumber(other.getNumber());
+        }
+        if (!other.getEventialitee().isEmpty()) {
+          eventialitee_ = other.eventialitee_;
+          onChanged();
         }
         if (other.getIsTrue() != false) {
           setIsTrue(other.getIsTrue());
@@ -1273,16 +1343,92 @@ public final class Game {
         return this;
       }
 
+      private java.lang.Object eventialitee_ = "";
+      /**
+       * <code>string eventialitee = 3;</code>
+       * @return The eventialitee.
+       */
+      public java.lang.String getEventialitee() {
+        java.lang.Object ref = eventialitee_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          eventialitee_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string eventialitee = 3;</code>
+       * @return The bytes for eventialitee.
+       */
+      public com.google.protobuf.ByteString
+          getEventialiteeBytes() {
+        java.lang.Object ref = eventialitee_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          eventialitee_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string eventialitee = 3;</code>
+       * @param value The eventialitee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEventialitee(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        eventialitee_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string eventialitee = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEventialitee() {
+        
+        eventialitee_ = getDefaultInstance().getEventialitee();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string eventialitee = 3;</code>
+       * @param value The bytes for eventialitee to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEventialiteeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        eventialitee_ = value;
+        onChanged();
+        return this;
+      }
+
       private boolean isTrue_ ;
       /**
-       * <code>bool isTrue = 3;</code>
+       * <code>bool isTrue = 4;</code>
        * @return The isTrue.
        */
       public boolean getIsTrue() {
         return isTrue_;
       }
       /**
-       * <code>bool isTrue = 3;</code>
+       * <code>bool isTrue = 4;</code>
        * @param value The isTrue to set.
        * @return This builder for chaining.
        */
@@ -1293,7 +1439,7 @@ public final class Game {
         return this;
       }
       /**
-       * <code>bool isTrue = 3;</code>
+       * <code>bool isTrue = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsTrue() {
@@ -1375,11 +1521,12 @@ public final class Game {
   static {
     java.lang.String[] descriptorData = {
       "\n\ngame.proto\"2\n\014guessRequest\022\022\n\nclientNa" +
-      "me\030\001 \001(\t\022\016\n\006number\030\002 \001(\001\"C\n\rguessRespons" +
-      "e\022\022\n\nclientName\030\001 \001(\t\022\016\n\006number\030\002 \001(\001\022\016\n" +
-      "\006isTrue\030\003 \001(\0102G\n\013GameService\0228\n\023fullDire" +
-      "ctionStream\022\r.guessRequest\032\016.guessRespon" +
-      "se(\0010\001B\017\n\rma.enset.subsb\006proto3"
+      "me\030\001 \001(\t\022\016\n\006number\030\002 \001(\005\"Y\n\rguessRespons" +
+      "e\022\022\n\nclientName\030\001 \001(\t\022\016\n\006number\030\002 \001(\001\022\024\n" +
+      "\014eventialitee\030\003 \001(\t\022\016\n\006isTrue\030\004 \001(\0102G\n\013G" +
+      "ameService\0228\n\023fullDirectionStream\022\r.gues" +
+      "sRequest\032\016.guessResponse(\0010\001B\017\n\rma.enset" +
+      ".subsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1396,7 +1543,7 @@ public final class Game {
     internal_static_guessResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_guessResponse_descriptor,
-        new java.lang.String[] { "ClientName", "Number", "IsTrue", });
+        new java.lang.String[] { "ClientName", "Number", "Eventialitee", "IsTrue", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
