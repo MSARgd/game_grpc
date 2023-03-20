@@ -1,10 +1,7 @@
 package ma.enset.services;
-
-
 import io.grpc.stub.StreamObserver;
 import ma.enset.subs.Game;
 import ma.enset.subs.GameServiceGrpc;
-
 public class GameGrpcServices extends GameServiceGrpc.GameServiceImplBase {
     final int magiqNumber =100;
     int counterClient =0;
@@ -13,11 +10,12 @@ public class GameGrpcServices extends GameServiceGrpc.GameServiceImplBase {
         return  new StreamObserver<Game.guessRequest>() {
             @Override
             public void onNext(Game.guessRequest guessRequest) {
-
                 if(magiqNumber==guessRequest.getNumber()){
                     System.out.println("Bravo vous avez gagné");
                     Game.guessResponse response = Game.guessResponse.newBuilder()
                             .setClientName("CLIENT")
+                            .setIsTrue(true)
+                            .setNumber(magiqNumber)
                             .setEventialitee("Bravo vous avez gagné")
                             .build();
                     responseObserver.onNext(response);
