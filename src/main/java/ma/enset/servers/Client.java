@@ -1,33 +1,16 @@
 package ma.enset.servers;
+
+import io.grpc.stub.StreamObserver;
+import ma.enset.subs.Game;
+
 public class Client {
-    private Long id;
-    private String addresIp;
+    private final StreamObserver<Game.guessResponse> responseObserver;
 
-    public Client() {
+    public Client(StreamObserver<Game.guessResponse> responseObserver) {
+        this.responseObserver = responseObserver;
     }
 
-    public Client(Long id, String addresIp) {
-        this.id = id;
-        this.addresIp = addresIp;
-    }
-
-    public Client(Long id) {
-        this.id = id;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getAddresIp() {
-        return addresIp;
-    }
-
-    public void setAddresIp(String addresIp) {
-        this.addresIp = addresIp;
+    public StreamObserver<Game.guessResponse> getResponseObserver() {
+        return responseObserver;
     }
 }

@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="480eda4d-b69a-49f0-8d28-2d2252487186" name="Changes" comment="second commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ma/enset/servers/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ma/enset/servers/GameServerMetaData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/enset/servers/grpcServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/enset/servers/GrpcServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ma/enset/intreprotors/ClientMetadataInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/enset/intreprotors/ClientMetadataInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ma/enset/servers/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/enset/servers/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ma/enset/servers/GrpcServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/enset/servers/GrpcServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ma/enset/services/GameGrpcServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/enset/services/GameGrpcServices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +98,7 @@
       <workItem from="1679320544742" duration="1796000" />
       <workItem from="1679325429648" duration="9584000" />
       <workItem from="1679349392815" duration="143000" />
-      <workItem from="1679354301433" duration="108000" />
+      <workItem from="1679354301433" duration="4573000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1678950817947</created>
