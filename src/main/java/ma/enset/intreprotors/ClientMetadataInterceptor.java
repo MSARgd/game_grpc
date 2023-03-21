@@ -1,14 +1,13 @@
 package ma.enset.intreprotors;
-
 import io.grpc.*;
 public class ClientMetadataInterceptor implements ServerInterceptor {
-
+    public String  clientIp;
     @Override
     public <ReqT, RespT> ServerCall.Listener<ReqT> interceptCall(ServerCall<ReqT, RespT> call,
                                                      Metadata headers,
                                                      ServerCallHandler<ReqT, RespT> next) {
         // retrieve client IP address
-        String clientIp = call.getAttributes().get(Grpc.TRANSPORT_ATTR_REMOTE_ADDR).toString();
+        clientIp = call.getAttributes().get(Grpc.TRANSPORT_ATTR_REMOTE_ADDR).toString();
         System.out.println(clientIp);
         // retrieve client metadata
         // ret

@@ -5,7 +5,7 @@ service  GameService{
 }
 message guessRequest{
   string clientName = 1;
-  int32 number =2;
+  int32 number = 2;
 }
 message guessResponse {
   string clientName = 1;
