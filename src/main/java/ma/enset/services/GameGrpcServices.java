@@ -7,7 +7,6 @@ import ma.enset.subs.Game;
 import ma.enset.subs.GameServiceGrpc;
 public class GameGrpcServices extends GameServiceGrpc.GameServiceImplBase {
     ClientMetadataInterceptor clientMetadataInterceptor;
-
     public void setClientMetadataInterceptor(ClientMetadataInterceptor clientMetadataInterceptor) {
         this.clientMetadataInterceptor = clientMetadataInterceptor;
     }
@@ -41,11 +40,11 @@ public class GameGrpcServices extends GameServiceGrpc.GameServiceImplBase {
                             .setNumber(magiqNumber)
                             .setEventialitee("Bravo vous avez gagné")
                             .build();
+
                     responseObserver.onNext(response);
                     String clientIp = clientMetadataInterceptor.clientIp;
 //                    grpcServer.brodcastingMessage(responseObserver);
                     grpcServer.brodcastingWinner("Winner is "+clientIp,responseObserver);
-
 //                    responseObserver.onCompleted();
                 } else if (magiqNumber<=guessRequest.getNumber()) {
                     System.out.println("Voter nomber est plus grand");

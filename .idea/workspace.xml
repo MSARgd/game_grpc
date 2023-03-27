@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="480eda4d-b69a-49f0-8d28-2d2252487186" name="Changes" comment="second commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ma/enset/servers/GrpcServer1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/enset/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/enset/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/enset/intreprotors/ClientMetadataInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/enset/intreprotors/ClientMetadataInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/enset/servers/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/enset/servers/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/enset/servers/GrpcServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/enset/servers/GrpcServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ma/enset/services/GameGrpcServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/enset/services/GameGrpcServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/game.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/game.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,25 +45,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ToolWindowRun.ShowToolbar": "false",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/msa/Documents/M1/S2/Programmation_distribuée_et_middlewares/midllewares/GRPC/GAME/game_grpc_tp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ToolWindowRun.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/msa/Documents/M1/S2/Programmation_distribuée_et_middlewares/midllewares/GRPC/GAME/client_grpc_game&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="GrpcServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ma.enset.servers.GrpcServer" />
@@ -104,7 +98,9 @@
       <workItem from="1679349392815" duration="143000" />
       <workItem from="1679354301433" duration="6500000" />
       <workItem from="1679404713580" duration="1567000" />
-      <workItem from="1679424380731" duration="12114000" />
+      <workItem from="1679424380731" duration="14043000" />
+      <workItem from="1679708021728" duration="437000" />
+      <workItem from="1679736129029" duration="682000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1678950817947</created>
@@ -133,5 +129,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="second commit" />
     <option name="LAST_COMMIT_MESSAGE" value="second commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ma/enset/intreprotors/ClientMetadataInterceptor.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
