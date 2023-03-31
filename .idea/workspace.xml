@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="480eda4d-b69a-49f0-8d28-2d2252487186" name="Changes" comment="second commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/enset/services/GameGrpcServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/enset/services/GameGrpcServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ma/enset/servers/GameServerMetaData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ma/enset/servers/GrpcServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/enset/servers/GrpcServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,13 +32,6 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
   </component>
   <component name="ProjectId" id="2N3OsmTv5WwRvviF6jeUc1P1bcg" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -101,6 +95,7 @@
       <workItem from="1679424380731" duration="14043000" />
       <workItem from="1679708021728" duration="437000" />
       <workItem from="1679736129029" duration="682000" />
+      <workItem from="1680259418636" duration="260000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1678950817947</created>

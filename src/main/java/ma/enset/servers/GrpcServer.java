@@ -8,8 +8,10 @@ import ma.enset.subs.Game;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
+
 public class GrpcServer {
-    final int s =100;
+    final int s = new Random().nextInt(101);
     List<Client> clientList = new ArrayList<>();
     public void addClient(Client client) {
         clientList.add(client);
